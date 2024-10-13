@@ -1,0 +1,18 @@
+[project]
+authors = ["Silvio Traversaro <silvio@traversaro.it>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "lz4example"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+configure = "cmake -GNinja -DCMAKE_BUILD_TYPE=Release -B.build -S."
+
+[dependencies]
+lz4-c = ">=1.9.4,<2"
+cmake = ">=3.30.5,<4"
+pkg-config = ">=0.29.2,<0.30"
+ninja = ">=1.12.1,<2"
+make = ">=4.4.1,<5"
+compilers = ">=1.8.0,<2"
